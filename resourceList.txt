@@ -4,3 +4,4 @@ Books:
 Websites:  
 http://www.oodesign.com/chain-of-responsibility-pattern.html  
 https://sourcemaking.com/design_patterns/chain_of_responsibility  
+https://www.draw.io/  (to create UML Class Diagram)  
