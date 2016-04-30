@@ -1,3 +1,6 @@
-Books  
+Books:  
+"Head First Design Patterns" by Freeman & Robson, pgs 622-623  
   
-Websites  
+Websites:  
+http://www.oodesign.com/chain-of-responsibility-pattern.html  
+https://sourcemaking.com/design_patterns/chain_of_responsibility  
