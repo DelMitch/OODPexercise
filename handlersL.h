@@ -1,6 +1,6 @@
 // handlersL.h
 // Addeline Mitchell
-// 29 Apr 2016
+// 1 May 2016
 //
 // For CS 372 Spring 2016, Assn 4 Exercise A
 // Header file for last name chain
@@ -9,7 +9,25 @@
 #ifndef HANDLERSL_H
 #define HANDLERSL_H
 
+
 #include "chain.h"
+
+
+/******************************************************************
+ * The 26 classes, one for each letter of the English alphabet,   *
+ * each contain only a single member function that overrides the  *
+ * virtual function 'handle' from the Chain class.                *
+ *                                                                *
+ * Each of the 'handle' functions in the classes below check the  *
+ * string passed to it for a specific letter. If the criteria is  *
+ * met, the last name of a Name object is set to a predetermined  *
+ * value. Otherwise, the string is sent to the next in the chain. *
+ *                                                                *
+ * If string is not handled, the user will be notified of invalid *
+ * input and the program will exit the chain. (User will be asked *
+ * for new input and the program will re-enter the chain. This    *
+ * continues until the user-inputted string is handled.)          *
+ ******************************************************************/
 
 class aHandlerL : public Chain
 {
@@ -327,10 +345,7 @@ class endHandlerL : public Chain // for unhandled input
 { // you'd have to use a foreign keyboard to ever get here
 public:
 	void handle(string str)
-	{
-		cout << "\n\nThat is not an English letter; Try Again\n" << endl;
-		Name::lastName();
-	}
+	{ cout << "\nThat is not an English letter; Try Again\n" << endl; }
 };
 
 #endif
