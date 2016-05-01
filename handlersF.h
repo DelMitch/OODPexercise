@@ -17,7 +17,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'a' || str[0] == 'A')
-		{ nom.setFName("Alphonse"); }
+		{ nom.setFName("Dusk"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -29,7 +29,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'b' || str[0] == 'B')
-		{ nom.setFName("Bartholome"); }
+		{ nom.setFName("Angelic"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -41,7 +41,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'c' || str[0] == 'C')
-		{ nom.setFName("Carmichael"); }
+		{ nom.setFName("White"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -53,7 +53,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'd' || str[0] == 'D')
-		{ nom.setFName("Diaval"); }
+		{ nom.setFName("Sun"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -65,7 +65,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'e' || str[0] == 'E')
-		{ nom.setFName("Elliot"); }
+		{ nom.setFName("Day"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -77,7 +77,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'f' || str[0] == 'F')
-		{ nom.setFName("Forsythe"); }
+		{ nom.setFName("Awesome"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -89,7 +89,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'g' || str[0] == 'G')
-		{ nom.setFName("George"); }
+		{ nom.setFName("Brilliant"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -101,7 +101,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'h' || str[0] == 'H')
-		{ nom.setFName("Halland"); }
+		{ nom.setFName("Little"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -113,7 +113,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'i' || str[0] == 'I')
-		{ nom.setFName("Isolde"); }
+		{ nom.setFName("Weird"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -125,7 +125,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'j' || str[0] == 'J')
-		{ nom.setFName("Jerome"); }
+		{ nom.setFName("Moon"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -137,7 +137,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'k' || str[0] == 'K')
-		{ nom.setFName("Kristoff"); }
+		{ nom.setFName("Sweet"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -149,7 +149,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'l' || str[0] == 'L')
-		{ nom.setFName("Lionel"); }
+		{ nom.setFName("Curious"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -161,7 +161,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'm' || str[0] == 'M')
-		{ nom.setFName("Micah"); }
+		{ nom.setFName("Vigilant"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -173,7 +173,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'n' || str[0] == 'N')
-		{ nom.setFName("Niall"); }
+		{ nom.setFName("Patient"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -185,7 +185,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'o' || str[0] == 'O')
-		{ nom.setFName("Ozmond"); }
+		{ nom.setFName("Brave"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -197,7 +197,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'p' || str[0] == 'P')
-		{ nom.setFName("Peter"); }
+		{ nom.setFName("Star"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -209,7 +209,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'q' || str[0] == 'Q')
-		{ nom.setFName("Quentin"); }
+		{ nom.setFName("Massive"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -221,7 +221,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'r' || str[0] == 'R')
-		{ nom.setFName("Reinard"); }
+		{ nom.setFName("Silent"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -233,7 +233,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 's' || str[0] == 'S')
-		{ nom.setFName("Sullivan"); }
+		{ nom.setFName("Adventurous"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -245,7 +245,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 't' || str[0] == 'T')
-		{ nom.setFName("Theo"); }
+		{ nom.setFName("Night"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -257,7 +257,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'u' || str[0] == 'U')
-		{ nom.setFName("Uriel"); }
+		{ nom.setFName("Light"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -269,7 +269,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'v' || str[0] == 'V')
-		{ nom.setFName("Vikas"); }
+		{ nom.setFName("Dark"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -281,7 +281,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'w' || str[0] == 'W')
-		{ nom.setFName("Warren"); }
+		{ nom.setFName("Strong"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -293,7 +293,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'x' || str[0] == 'X')
-		{ nom.setFName("Xavier"); }
+		{ nom.setFName("Sharp"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -305,7 +305,7 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'y' || str[0] == 'Y')
-		{ nom.setFName("Yurik"); }
+		{ nom.setFName("Clever"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -317,9 +317,19 @@ public:
 	void handle(string str)
 	{
 		if (str[0] == 'z' || str[0] == 'Z')
-		{ nom.setFName("Zander"); }
+		{ nom.setFName("Fierce"); }
 		else
-		{ cout << "\n\nINVALID\n\n" << endl; } // no more letters in alphabet
+		{ Chain::handle(str); }
+	}
+};
+
+class endHandlerF : public Chain // for unhandled input
+{ // you'd have to use a foreign keyboard to ever get here
+public:
+	void handle(string str)
+	{
+		cout << "\n\nThat is not an English letter; Try Again\n" << endl;
+		Name::firstName();
 	}
 };
 
