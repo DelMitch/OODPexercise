@@ -1,6 +1,6 @@
 // handlersC.h
 // Addeline Mitchell
-// 29 Apr 2016
+// 1 May 2016
 //
 // For CS 372 Spring 2016, Assn 4 Exercise A
 // Header file for color chain
@@ -9,7 +9,26 @@
 #ifndef HANDLERSC_H
 #define HANDLERSC_H
 
+
 #include "chain.h"
+
+
+/******************************************************************
+ * The 11 classes, one for each of 11 different colors, each      *
+ * contain only a single member function that overrides the       *
+ * virtual function 'handle' from the Chain class.                *
+ *                                                                *
+ * Each of the 'handle' functions in the classes below check the  *
+ * string passed to it for a specific color string. If the        *
+ * criteria is met, the color of a Name object is set to a        *
+ * predetermined value. Otherwise, the string is sent to the next *
+ * in the chain.                                                  *
+ *                                                                *
+ * If string is not handled, the user will be notified of invalid *
+ * input and the program will exit the chain. (User will be asked *
+ * for new input and the program will re-enter the chain. This    *
+ * continues until the user-inputted string is handled.)          *
+******************************************************************/
 
 class redHandlerC : public Chain // red
 {
@@ -147,10 +166,7 @@ class endHandlerC : public Chain // for unhandled input
 {
 public:
 	void handle(string str)
-	{
-		cout << "\n\nThat is not a color; Try Again\n" << endl;
-		Name::shirtColor();
-	}
+	{ cout << "\nThat is not a color; Try Again\n" << endl; }
 };
 
 #endif
