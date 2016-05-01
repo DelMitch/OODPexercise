@@ -16,8 +16,8 @@ class redHandlerC : public Chain // red
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'r' || str[0] == 'R')
-		{ nom.setColor("Red"); }
+		if (str == "red")
+		{ nom.setColor("the Panda"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -28,8 +28,8 @@ class orangeHandlerC : public Chain // orange
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'o' || str[0] == 'O')
-		{ nom.setColor("Orange"); }
+		if (str == "orange")
+		{ nom.setColor("the Llama"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -40,8 +40,8 @@ class yellowHandlerC : public Chain // yellow
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'y' || str[0] == 'Y')
-		{ nom.setColor("Yellow"); }
+		if (str == "yellow")
+		{ nom.setColor("the Rabbit"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -52,8 +52,8 @@ class greenHandlerC : public Chain // green
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'g' || str[0] == 'D')
-		{ nom.setColor("Green"); }
+		if (str == "green")
+		{ nom.setColor("the Grizzly Bear"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -64,8 +64,8 @@ class blueHandlerC : public Chain // blue
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'b' || str[0] == 'B')
-		{ nom.setColor("Blue"); }
+		if (str == "blue")
+		{ nom.setColor("the Falcon"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -76,8 +76,8 @@ class purpleHandlerC : public Chain // purple
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'p' || str[0] == 'P')
-		{ nom.setColor("Purple"); }
+		if (str == "purple")
+		{ nom.setColor("the Serpent"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -88,8 +88,8 @@ class pinkHandlerC : public Chain // pink
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'i' || str[0] == 'I')
-		{ nom.setColor("Pink"); }
+		if (str == "pink")
+		{ nom.setColor("the Elephant"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -100,8 +100,8 @@ class brownHandlerC : public Chain // brown
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'n' || str[0] == 'N')
-		{ nom.setColor("Brown"); }
+		if (str == "brown")
+		{ nom.setColor("the Fox"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -112,8 +112,8 @@ class whiteHandlerC : public Chain // white
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'w' || str[0] == 'W')
-		{ nom.setColor("White"); }
+		if (str == "white")
+		{ nom.setColor("the Wolf"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -124,8 +124,8 @@ class greyHandlerC : public Chain // grey
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'e' || str[0] == 'E')
-		{ nom.setColor("Grey"); }
+		if (str == "grey" || str == "gray") // both spellings are valid
+		{ nom.setColor("the Lion"); }
 		else
 		{ Chain::handle(str); }
 	}
@@ -136,10 +136,20 @@ class blackHandlerC : public Chain // black
 public:
 	void handle(string str)
 	{
-		if (str[0] == 'l' || str[0] == 'L')
-		{ nom.setColor("Black"); }
+		if (str == "black")
+		{ nom.setColor("the Tiger"); }
 		else
 		{ Chain::handle(str); }
+	}
+};
+
+class endHandlerC : public Chain // for unhandled input
+{
+public:
+	void handle(string str)
+	{
+		cout << "\n\nThat is not a color; Try Again\n" << endl;
+		Name::shirtColor();
 	}
 };
 
