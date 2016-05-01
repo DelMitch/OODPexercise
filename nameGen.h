@@ -12,6 +12,9 @@
 
 #include <cstdlib>
 
+#include <algorithm>
+using std::transform;
+
 #include <iostream>
 using std::cout;
 using std::cin;
