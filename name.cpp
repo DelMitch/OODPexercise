@@ -38,7 +38,9 @@ void Name::firstName()
 	xHandlerF x;
 	yHandlerF y;
 	zHandlerF z;
-	root.nxt(&b);
+	endHandlerF end;
+
+	root.nxt(&b); // link chain together
 	root.nxt(&c);
 	root.nxt(&d);
 	root.nxt(&e);
@@ -63,13 +65,14 @@ void Name::firstName()
 	root.nxt(&x);
 	root.nxt(&y);
 	root.nxt(&z);
+	root.nxt(&end);
 
 	bool leave = false;
 	string str;
 
 	do
 	{
-		cout << "First initial of Forename: ";
+		cout << "First letter of Forename (A-Z): ";
 		getline(cin, str);
 
 		if (isalpha(str[0]))
@@ -111,7 +114,9 @@ void Name::lastName()
 	xHandlerL x;
 	yHandlerL y;
 	zHandlerL z;
-	root.nxt(&b);
+	endHandlerL end;
+
+	root.nxt(&b); // link chain together
 	root.nxt(&c);
 	root.nxt(&d);
 	root.nxt(&e);
@@ -136,13 +141,14 @@ void Name::lastName()
 	root.nxt(&x);
 	root.nxt(&y);
 	root.nxt(&z);
+	root.nxt(&end);
 
 	bool leave = true;
 	string str;
 
 	do
 	{
-		cout << "First initial of Surname: ";
+		cout << "First letter of Surname (A-Z): ";
 		getline(cin, str);
 
 		if (isalpha(str[0]))
@@ -169,27 +175,35 @@ void Name::shirtColor()
 	whiteHandlerC white;
 	greyHandlerC grey;
 	blackHandlerC black;
-	root.nxt(&orange);
+	endHandlerC end;
+
+	root.nxt(&orange); // link chain together
 	root.nxt(&yellow);
 	root.nxt(&green);
 	root.nxt(&blue);
 	root.nxt(&purple);
+	root.nxt(&pink);
 	root.nxt(&brown);
 	root.nxt(&white);
 	root.nxt(&grey);
 	root.nxt(&black);
+	root.nxt(&end);
 
 	bool leave = true;
 	string str;
 
 	do
 	{
+		cout << "Color options are:\n"
+			 << "red   orange   yellow   green   blue   purple   pink   brown   white   grey   black\n" << endl;
 		cout << "Current Shirt Color: ";
 		getline(cin, str);
 
 		if (isalpha(str[0]))
 		{
 			cout << endl;
+			transform(str.begin(), str.end(), str.begin(), tolower);
+
 			root.handle(str); // color handled
 			leave = false;    // we can leave
 		}
@@ -204,7 +218,7 @@ void Name::formName()
 	lastName();
 	shirtColor();
 
-	cout << "\nYour [Generated Name] is: " 
+	cout << "\nYour [thing] Name is: " 
 		 << getFName() << " "
 		 << getLName() << " "
 		 << getColor() << endl;
@@ -212,9 +226,23 @@ void Name::formName()
 
 int main()
 {
-	nom.formName();
-	cout << endl;
+	bool leave = false;
+	string ans;
+	
+	cout << "Welcome to the [thing] Name Generator!\n" << endl;
 
-	system("PAUSE");
+	do
+	{
+		nom.formName();
+
+		cout << "\n\nGenerate another name? (Y or N): ";
+		getline(cin, ans);
+
+		if (ans[0] != 'y' && ans[0] != 'Y')
+		{ leave = true; }
+
+		cout << endl << endl;
+	} while (!leave);
+
 	return 0;
 }
