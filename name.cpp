@@ -1,6 +1,6 @@
 // name.cpp
 // Addeline Mitchell
-// 29 Apr 2016
+// 1 May 2016
 //
 // For CS 372 Spring 2016, Assn 4 Exercise A
 // Source file for nameGen, chain, & handler header files
@@ -10,9 +10,12 @@
 #include "handlersL.h"
 #include "handlersC.h"
 
+
+// firstName
+// determines first part of generated name via chain
 void Name::firstName()
 {
-	aHandlerF root; // set up chain
+	aHandlerF root;
 	bHandlerF b;
 	cHandlerF c;
 	dHandlerF d;
@@ -40,55 +43,55 @@ void Name::firstName()
 	zHandlerF z;
 	endHandlerF end;
 
-	root.nxt(&b); // link chain together
-	root.nxt(&c);
-	root.nxt(&d);
-	root.nxt(&e);
-	root.nxt(&f);
-	root.nxt(&g);
-	root.nxt(&h);
-	root.nxt(&i);
-	root.nxt(&j);
-	root.nxt(&k);
-	root.nxt(&l);
-	root.nxt(&m);
-	root.nxt(&n);
-	root.nxt(&o);
-	root.nxt(&p);
-	root.nxt(&q);
-	root.nxt(&r);
-	root.nxt(&s);
-	root.nxt(&t);
-	root.nxt(&u);
-	root.nxt(&v);
-	root.nxt(&w);
-	root.nxt(&x);
-	root.nxt(&y);
-	root.nxt(&z);
-	root.nxt(&end);
+	root.link(&b); // link chain together
+	root.link(&c);
+	root.link(&d);
+	root.link(&e);
+	root.link(&f);
+	root.link(&g);
+	root.link(&h);
+	root.link(&i);
+	root.link(&j);
+	root.link(&k);
+	root.link(&l);
+	root.link(&m);
+	root.link(&n);
+	root.link(&o);
+	root.link(&p);
+	root.link(&q);
+	root.link(&r);
+	root.link(&s);
+	root.link(&t);
+	root.link(&u);
+	root.link(&v);
+	root.link(&w);
+	root.link(&x);
+	root.link(&y);
+	root.link(&z);
+	root.link(&end);
 
-	bool leave = false;
 	string str;
 
 	do
 	{
-		cout << "First letter of Forename (A-Z): ";
+		cout << "First letter of your Forename (A-Z): ";
 		getline(cin, str);
 
 		if (isalpha(str[0]))
 		{
 			cout << endl;
-			root.handle(str); // first name handled
-			leave = true;     // we can leave
+			root.handle(str); // enter first name chain
 		}
 		else
 		{ cout << "\n\nInvalid Input; Try Again\n" << endl; }
-	} while (!leave);
+	} while (Name::getFName() == "none"); // leave when name is set
 }
 
+// lastName
+// determines second part of generated name via chain
 void Name::lastName()
 {
-	aHandlerL root; // set up chain
+	aHandlerL root;
 	bHandlerL b;
 	cHandlerL c;
 	dHandlerL d;
@@ -116,55 +119,55 @@ void Name::lastName()
 	zHandlerL z;
 	endHandlerL end;
 
-	root.nxt(&b); // link chain together
-	root.nxt(&c);
-	root.nxt(&d);
-	root.nxt(&e);
-	root.nxt(&f);
-	root.nxt(&g);
-	root.nxt(&h);
-	root.nxt(&i);
-	root.nxt(&j);
-	root.nxt(&k);
-	root.nxt(&l);
-	root.nxt(&m);
-	root.nxt(&n);
-	root.nxt(&o);
-	root.nxt(&p);
-	root.nxt(&q);
-	root.nxt(&r);
-	root.nxt(&s);
-	root.nxt(&t);
-	root.nxt(&u);
-	root.nxt(&v);
-	root.nxt(&w);
-	root.nxt(&x);
-	root.nxt(&y);
-	root.nxt(&z);
-	root.nxt(&end);
+	root.link(&b); // link chain together
+	root.link(&c);
+	root.link(&d);
+	root.link(&e);
+	root.link(&f);
+	root.link(&g);
+	root.link(&h);
+	root.link(&i);
+	root.link(&j);
+	root.link(&k);
+	root.link(&l);
+	root.link(&m);
+	root.link(&n);
+	root.link(&o);
+	root.link(&p);
+	root.link(&q);
+	root.link(&r);
+	root.link(&s);
+	root.link(&t);
+	root.link(&u);
+	root.link(&v);
+	root.link(&w);
+	root.link(&x);
+	root.link(&y);
+	root.link(&z);
+	root.link(&end);
 
-	bool leave = true;
 	string str;
 
 	do
 	{
-		cout << "First letter of Surname (A-Z): ";
+		cout << "First letter of your Surname (A-Z): ";
 		getline(cin, str);
 
 		if (isalpha(str[0]))
 		{
 			cout << endl;
-			root.handle(str); // last name handled
-			leave = false;    // we can leave
+			root.handle(str); // enter last name chain
 		}
 		else
 		{ cout << "\n\nInvalid Input; Try Again\n" << endl; }
-	} while (leave);
+	} while (Name::getLName() == "none"); // leave when name is set
 }
 
+// shirtColor
+// determines animal part of generated name via chain
 void Name::shirtColor()
 {
-	redHandlerC root; // set up chain
+	redHandlerC root;
 	orangeHandlerC orange;
 	yellowHandlerC yellow;
 	greenHandlerC green;
@@ -177,63 +180,65 @@ void Name::shirtColor()
 	blackHandlerC black;
 	endHandlerC end;
 
-	root.nxt(&orange); // link chain together
-	root.nxt(&yellow);
-	root.nxt(&green);
-	root.nxt(&blue);
-	root.nxt(&purple);
-	root.nxt(&pink);
-	root.nxt(&brown);
-	root.nxt(&white);
-	root.nxt(&grey);
-	root.nxt(&black);
-	root.nxt(&end);
+	root.link(&orange); // link chain together
+	root.link(&yellow);
+	root.link(&green);
+	root.link(&blue);
+	root.link(&purple);
+	root.link(&pink);
+	root.link(&brown);
+	root.link(&white);
+	root.link(&grey);
+	root.link(&black);
+	root.link(&end);
 
-	bool leave = true;
 	string str;
 
 	do
 	{
 		cout << "Color options are:\n"
 			 << "red   orange   yellow   green   blue   purple   pink   brown   white   grey   black\n" << endl;
-		cout << "Current Shirt Color: ";
+		cout << "Your current Shirt Color: ";
 		getline(cin, str);
 
 		if (isalpha(str[0]))
 		{
 			cout << endl;
 			transform(str.begin(), str.end(), str.begin(), tolower);
-
-			root.handle(str); // color handled
-			leave = false;    // we can leave
+			root.handle(str); // enter color chain
 		}
 		else
 		{ cout << "\n\nInvalid Input; Try Again\n" << endl; }
-	} while (leave);
+	} while (Name::getColor() == "none"); // leave when color is set
 }
 
+// formName
+// produces the generated name
 void Name::formName()
 {
-	firstName();
-	lastName();
-	shirtColor();
+	firstName();  // process first name
+	lastName();   // process last name
+	shirtColor(); // process color
 
-	cout << "\nYour [thing] Name is: " 
+	cout << "\nYour Wild Animal Name is: "
 		 << getFName() << " "
 		 << getLName() << " "
 		 << getColor() << endl;
 }
 
+// main
+// allows the user to generate as many names as they like
+// # of distinct names: 7436
 int main()
 {
 	bool leave = false;
 	string ans;
 	
-	cout << "Welcome to the [thing] Name Generator!\n" << endl;
+	cout << "Welcome to the Wild Animal Name Generator!\n" << endl;
 
 	do
 	{
-		nom.formName();
+		nom.formName(); // begin name generation process
 
 		cout << "\n\nGenerate another name? (Y or N): ";
 		getline(cin, ans);
