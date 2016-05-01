@@ -1,0 +1,38 @@
+A  -f- Dusk         -l- Flower
+B  -f- Angelic      -l- Paw
+C  -f- White        -l- Adventurer
+D  -f- Sun          -l- Beast
+E  -f- Day          -l- Hollow
+F  -f- Awesome      -l- Child
+G  -f- Brilliant    -l- Heart
+H  -f- Little       -l- Walker
+I  -f- Weird        -l- Harbinger
+J  -f- Moon         -l- Sky
+K  -f- Sweet        -l- Soldier
+L  -f- Curious      -l- Wanderer
+M  -f- Vigilant     -l- Hunter
+N  -f- Patient      -l- Claw
+O  -f- Brave        -l- Healer
+P  -f- Star         -l- Tail-Chaser
+Q  -f- Massive      -l- Reaper
+R  -f- Silent       -l- Seeker
+S  -f- Adventurous  -l- Moon
+T  -f- Night        -l- Avenger
+U  -f- Light        -l- Stone
+V  -f- Dark         -l- Thunder
+W  -f- Strong       -l- Lightning
+X  -f- Sharp        -l- Fang
+Y  -f- Clever       -l- Shadow
+Z  -f- Fierce       -l- Scavenger
+
+red     --  Panda
+orange  --  Llama
+yellow  --  Rabbit
+green   --  Grizzly Bear
+blue    --  Falcon
+purple  --  Serpent
+pink    --  Elephant
+brown   --  Fox
+white   --  Wolf
+grey    --  Lion
+black   --  Tiger
