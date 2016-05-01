@@ -1,6 +1,6 @@
 // nameGen.h
 // Addeline Mitchell
-// 29 Apr 2016
+// 1 May 2016
 //
 // For CS 372 Spring 2016, Assn 4 Exercise A
 // Header file for nameGen class
@@ -25,29 +25,46 @@ using std::string;
 using std::getline;
 
 
+// Name
+// this class is used for the construction of Name objects
+// and contains functions that can act on those objects
 class Name
 {
 public:
+	// default ctor
 	Name()
 	{
-		firstN = "empty";
-		lastN = "empty";
-		color = "empty";
+		firstN = "none";
+		lastN = "none";
+		color = "none";
 	}
 
-	string getFName() { return firstN; }
+	// setFName, setLName, setColor
+	// set the vars for first name, last name, & color, respectively
 	void setFName(string str) { firstN = str; }
-
-	string getLName() { return lastN; }
 	void setLName(string str) { lastN = str; }
-
-	string getColor() { return color; }
 	void setColor(string str) { color = str; }
 
+	// getFName, getLName, getColor
+	// get the values for first name, last name, & color, respectively
+	string getFName() { return firstN; }
+	string getLName() { return lastN; }
+	string getColor() { return color; }
+
+	// firstName
+	// documentation with implementation
 	void firstName();
+
+	// lastName
+	// documentation with implementation
 	void lastName();
+
+	// shirtColor
+	// documentation with implementation
 	void shirtColor();
 
+	// formName
+	// documentation with implementation
 	void formName();
 
 protected:
