@@ -25,6 +25,10 @@ public:
 	// default ctor
 	Chain()
 	{ next = nullptr; }
+	
+	// virtual dctor
+	// to make sure memory management is done correctly
+	virtual ~Chain() {}
 
 	// link
 	// links objects from Chain & its derived classes
